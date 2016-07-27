@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Testing Gradle Plugins</title>
+
+    <!-- Fill These Out -->
+    <meta name="description" content="How to unit and functional test your gradle plugins">
+    <meta name="author" content="Andrew Reitz">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="lib/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="lib/reveal.js/css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+	<script>
+		if( window.location.search.match( /print-pdf/gi ) ) {
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = 'lib/reveal.js/lib/css/print/pdf.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		}
+	</script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section data-markdown="slides/Title.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/WhoAmI.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/WhyTest1.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/WhyTestTheGroovyAndroidStory.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/HowToUnitTest1.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/HowToUnitTest2.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/HowToUnitTest3.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/HowToFunctionalTest1.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/HowToFunctionalTest2.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/HowToFunctionalTest3.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/HowToFunctionalTest4.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/HowToFunctionalTest5.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/HowToFunctionalTest6.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/HowToFunctionalTest7.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/HowToFunctionalTest8.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/TipsAndTricks1.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/TipsAndTricks3.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/TipsAndTricks4.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/TipsAndTricks5.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/InTheRealWorld.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="slides/TheEnd.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+    </div>
+
+    <script src="lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="lib/reveal.js/js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            // The "normal" size of the presentation, aspect ratio will be preserved
+            // when the presentation is scaled to fit different resolutions. Can be
+            // specified using percentage units.
+            width: 1280,
+            height: 1024,
+
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
+
+            // Bounds for smallest/largest possible scale to apply to content
+            minScale: 0.2,
+            maxScale: 5,
+
+            // available themes are in /css/theme
+            theme: Reveal.getQueryHash().theme,
+
+            // default/cube/page/concave/zoom/linear/fade/none
+            transition: Reveal.getQueryHash().transition || 'default',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } }
+                , { src: 'lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }
+                , { src: 'lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }
+                , { src: 'lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                , { src: 'lib/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+                , { src: 'lib/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                // uncomment for remote
+            ]
+        });
+
+    </script>
+</div>
+</body>
+</html>
