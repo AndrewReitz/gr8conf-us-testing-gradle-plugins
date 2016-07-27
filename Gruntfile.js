@@ -49,18 +49,6 @@ module.exports = function (grunt) {
         htmllint: {
             all: ["src/index.html"]
         },
-        imagemin: {
-            dynamic: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'src/',
-                        src: ['**/*.{png,jpg,gif}'],
-                        dest: 'src/'
-                    }
-                ]
-            }
-        },
         clean: {
             build: [
                 "dist/css",
@@ -105,7 +93,6 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-open');
     grunt.loadNpmTasks('grunt-html');
@@ -126,7 +113,6 @@ module.exports = function (grunt) {
         console.log("  connect:\tStart a local server for testing on port 8888");
         console.log("  open:connect\tOpens Google Chrome to the index page on port 8888");
         console.log("  open:dev\tOpens the html file in chrome");
-        console.log("  imagemin\tOptimize your images for the web");
     });
 
     grunt.registerTask('dev', 'Runs all dev commands, if your are developing you want this', 'concurrent:target');
@@ -134,7 +120,6 @@ module.exports = function (grunt) {
     grunt.registerTask('release', 'Creates the release build and publishes it to github pages',
         [
             'clean:build',
-            'imagemin',
             'copy:release',
             'copy:releaseReplace'
         ]
