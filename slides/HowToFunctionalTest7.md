@@ -7,6 +7,9 @@ buildFile << """
       maven { url "${localRepo.toURI()}" }
       jcenter()
     }
+    dependencies {
+      classpath 'com.your.coolplugin:plugin:+'
+    }
     ...
   }
 
